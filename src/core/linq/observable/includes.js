@@ -37,5 +37,5 @@
    */
   observableProto.contains = function (searchElement, fromIndex) {
     //deprecate('contains', 'includes');
-    observableProto.includes(searchElement, fromIndex);
+    return this.includes(searchElement, fromIndex);
   };
