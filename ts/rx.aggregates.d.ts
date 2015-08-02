@@ -22,6 +22,8 @@ declare module Rx {
 		every(predicate?: (value: T) => boolean, thisArg?: any): Observable<boolean>;	// alias for all
 		contains(value: T): Observable<boolean>;
 		contains<TOther>(value: TOther, comparer: (value1: T, value2: TOther) => boolean): Observable<boolean>;
+		includes(value: T): Observable<boolean>;
+		includes<TOther>(value: TOther, comparer: (value1: T, value2: TOther) => boolean): Observable<boolean>;
 		count(predicate?: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): Observable<number>;
 		sum(keySelector?: (value: T, index: number, source: Observable<T>) => number, thisArg?: any): Observable<number>;
 		minBy<TKey>(keySelector: (item: T) => TKey, comparer: (value1: TKey, value2: TKey) => number): Observable<T>;
